@@ -1,0 +1,6 @@
+matplotlib
+opencv-python
+numpy
+Image
+tensorflow
+git+https://www.github.com/ildoonet/tf-pose-estimation.git

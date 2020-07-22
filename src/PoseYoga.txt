@@ -1,0 +1,35 @@
+
+- pose detection yoga => 
+recuperer points de coco model, mettre dans un NN et comparer avec yoga pose
+
+commencer avec 2 positions tres differentes:
+
+// 1. bouding the body
+1. get joint points => OpenPose coco  OR tensorflow/tesorflow lite
+2. create a Pose object and PoseSequence for all frame
+3. normalize points for different tailles and distance from the camera (based on the torse length - in pixels) => tout est en % par rapport au torse
+4. calculer les angles relevantim
+5. faire 2 model sur ces angles :
+	5a. Quelle position (positionA, positionB, other)? - maybe use regular pretrained cnn
+	5b. goodness of the position
+
+
+Limits:
+- 1 person in the frame
+- 2 positions
+- ptetre probleme de detection pour positions incongrues
+
+
+
+
+========================
+Papers:
+https://www.researchgate.net/publication/324759769_Pose_Trainer_Correcting_Exercise_Posture_using_Pose_Estimation
+https://towardsdatascience.com/human-pose-estimation-simplified-6cfd88542ab3
+https://www.researchgate.net/publication/294281490_Yoga_Posture_Recognition_for_Self-training
+https://medium.com/@nhoral/using-transfer-learning-to-detect-yoga-poses-74a8daee3ddb
+
+
+
+Data:
+https://neurohive.io/en/news/yoga-82-new-dataset-with-complex-yoga-poses/
